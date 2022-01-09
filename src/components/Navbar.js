@@ -1,11 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
 
     const [menu, setMenu] = useState(false)
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+
+        const changeWidth = () => {
+            setScreenWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', changeWidth)
+
+        return () => {
+            window.removeEventListener('resize', changeWidth)
+        }
 
 
+    }, [])
 
     return (
         <nav className="max-w-screen-xl m-auto">
@@ -15,9 +29,9 @@ const Navbar = () => {
                         <h1 className="text-xl md:text-4xl">XYZ</h1>
                     </Link>
                 </div>
-                {window.screen.width > 520 ?
-                    <div>
-                        <ul className="flex flex-row text-sm md:text-l  space-x-3 cursor-pointer">
+                {screenWidth > 768 ?
+                    <div className="">
+                        <ul className="flex flex-row  text-sm md:text-l  space-x-3 cursor-pointer">
                             <Link to="/about-us">
                                 <li className="hover:underline">OUR COMPANY</li>
                             </Link>

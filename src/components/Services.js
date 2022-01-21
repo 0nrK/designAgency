@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Categories = () => {
+const Services = () => {
     return (
         <div >
-            <div className="flex flex-col flex-wrap md:space-y-0 space-y-4 p-4 md:flex-row justify-around align-center py-32">
-                <div className="relative cursor-pointer drop-shadow-lg flex flex-1  justify-center align-center text-center  hover:scale-95 transform transition duration-1000 ">
+            <div className="flex flex-col flex-wrap md:space-y-0 space-y-4 p-4 grayscale md:flex-row justify-around align-center py-32">
+                <div className="relative cursor-pointer shadow-lg  flex flex-1  justify-center align-center text-center  ">
                     <img
                         className="object-cover h-96 md:h-auto"
                         alt=""
@@ -14,7 +14,7 @@ const Categories = () => {
                         <span className="text-white text-l">SEE PROJECTS</span>
                     </div>
                 </div>
-                <div className="relative flex flex-1 drop-shadow-lg justify-center align-center text-center h-96 cursor-pointer hover:scale-95 transform transition duration-1000 ">
+                <div className="relative flex flex-1 drop-shadow-lg  justify-center align-center text-center h-96 cursor-pointer">
                     <img
                         className="object-cover h-96 md:h-auto"
                         alt=""
@@ -24,7 +24,7 @@ const Categories = () => {
                         <span className="text-white text-l">SEE PROJECTS</span>
                     </div>
                 </div>
-                <div className="relative flex flex-1 drop-shadow-lg justify-center align-center cursor-pointer hover:scale-95 transform transition duration-1000 ">
+                <div className="relative flex flex-1 drop-shadow-lg justify-center align-center cursor-pointer  ">
                     <img
                         className="object-cover h-96 md:h-auto"
                         alt=""
@@ -39,4 +39,4 @@ const Categories = () => {
     )
 }
 
-export default Categories
+export default Services
